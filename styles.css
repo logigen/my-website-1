@@ -1,0 +1,105 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F4F8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Стили для навигации и заголовка */
+header nav h1 {
+  text-align: center;
+  background-color: #57a177;
+  color: white;
+  padding: 20px;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Основной блок */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; /* Для адаптивности */
+  justify-content: space-between; /* Распределение блоков по горизонтали */
+  gap: 20px; /* Расстояние между блоками */
+}
+
+/* Стили для разделов */
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Блоки занимают равное количество места */
+  min-width: 400px; /* Увеличили минимальную ширину блока */
+  max-width: 100%; /* Увеличили максимальную ширину блока до 45% */
+  padding: 15px; /* Увеличили отступы внутри блока */
+  box-sizing: border-box;
+  text-align: left; /* Оставляем текст выровненным по левому краю */
+}
+
+/* Стили заголовков */
+section h2 {
+  background-color: #E8F4F8;
+  color: #004BA8;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+section h3 {
+  color: #444;
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+
+/* Стили для списка преимуществ и недостатков */
+ul {
+  list-style: disc inside;
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  main {
+      flex-direction: column; /* Секции будут вертикально на маленьких экранах */
+      padding: 0 10px;
+  }
+  
+  section {
+      max-width: 100%; /* Секции занимают всю ширину экрана */
+  }
+}
+
+/* Стиль для круглых изображений */
+.circle-image {
+  display: flex;
+  justify-content: center; /* Центрируем картинку */
+  margin-bottom: 15px; /* Отступ от текста */
+}
+
+.circle-image img {
+  border-radius: 50%; /* Делаем изображение круглым */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  .circle-image img {
+    width: 150px; /* Меньший размер для мобильных устройств */
+    height: 150px;
+  }
+}
